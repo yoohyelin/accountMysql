@@ -1,0 +1,35 @@
+### use balance account
+### account 생성 먼저 되어야함
+POST http://localhost:8080/transaction/use
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "accountNumber": "1000000002",
+  "amount" : 100
+}
+
+### use balance account2
+### account 생성 먼저 되어야함
+POST http://localhost:8080/transaction/use
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "accountNumber": "1000000002",
+  "amount" : 100
+}
+
+### cancel balance
+### account 생성 먼저 되어야함
+POST http://localhost:8080/transaction/cancel
+Content-Type: application/json
+
+{
+  "transactionId": "5977240150d84a4fa23fe578de2fe173",
+  "accountNumber": "1000000002",
+  "amount" : 30000
+}
+
+### query tracsaction
+GET http://localhost:8080/transaction/286335342bc3428d96a999006da8fd49
