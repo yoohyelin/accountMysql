@@ -2,21 +2,24 @@ spring:
   redis:
     host: 127.0.0.1
     port: 6379
+    maxmemory: 128M
   datasource:
-    url: jdbc:h2:mem:test
-    username: sa
-    password:
-    driverClassName: org.h2.Driver
-  h2:
-    console:
-      enabled: true
+    url: jdbc:mysql://localhost:3306/accountdb?autoReconnect=true
+    username: hyelin
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    initialization-mode: always
   jpa:
     defer-datasource-initialization: true
-    database-platform: H2
+    database-platform: MySQL
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: create
     open-in-view: false
     properties:
       hibernate:
+        dialect: org.hibernate.dialect.MariaDBDialect
         format_sql: true
         show_sql: true
+  h2:
+    console:
+      enabled: false  # H2 콘솔 비활성화
