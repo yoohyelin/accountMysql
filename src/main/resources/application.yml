@@ -4,7 +4,7 @@ spring:
     port: 6379
     maxmemory: 128M
   datasource:
-    url: jdbc:mysql://localhost:3306/accountdb?autoReconnect=true
+    url: jdbc:mysql://accountdb.cxkkymmo0avj.ap-northeast-2.rds.amazonaws.com:3306/accountdb?autoReconnect=true
     username: hyelin
     password: 1234
     driver-class-name: com.mysql.cj.jdbc.Driver
