@@ -5,8 +5,8 @@ spring:
     maxmemory: 128M
   datasource:
     url: jdbc:mysql://accountdb.cxkkymmo0avj.ap-northeast-2.rds.amazonaws.com:3306/accountdb?autoReconnect=true
-    username: hyelin
-    password: 1234
+    username: root
+    password: rootroot
     driver-class-name: com.mysql.cj.jdbc.Driver
     initialization-mode: always
   jpa:
